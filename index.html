@@ -286,9 +286,58 @@
 
   @media (max-width: 780px){
     body{ flex-direction:column; }
-    .sidebar{ width:100%; height:auto; position:relative; }
+    .sidebar{
+      width:100%;
+      height:auto;
+      position:relative;
+      border-right:none;
+      border-bottom:1px solid var(--border);
+    }
+    .sidebar-head{ padding:22px 18px 14px; }
+    .sidebar-head h1{ font-size:20px; }
+    .round-label{ padding:14px 18px 6px; }
+    .topic-list{ padding:0 10px 8px; }
+    .topic-btn{ font-size:14px; padding:11px 10px; }
+    .sidebar-foot{ padding:16px 18px 20px; }
     main{ height:auto; }
-    .content-wrap{ padding:32px 20px 80px; }
+    .content-wrap{ padding:24px 16px 60px; }
+    .empty-state{ height:auto; min-height:45vh; align-items:stretch; text-align:right; }
+    .empty-state h2{ font-size:24px; }
+    .empty-state p{ max-width:none; }
+    .topic-header{ margin-bottom:18px; }
+    .topic-title{ font-size:22px; }
+    .side-toggle{ gap:6px; margin-bottom:20px; }
+    .side-btn{ font-size:15px; padding:10px 8px 12px; }
+    .panel{
+      padding-right:0;
+      border-right:none;
+      border-top:2px solid transparent;
+      padding-top:8px;
+    }
+    .panel p,
+    .panel .quote,
+    .panel ol,
+    .panel ul,
+    .panel .note{
+      max-width:none;
+      margin-left:0;
+      width:100%;
+    }
+    .panel .quote{ padding:16px 18px; font-size:16px; }
+    .panel p{ font-size:15px; }
+    .panel li{ font-size:15px; }
+  }
+
+  @media (max-width: 420px){
+    .sidebar-head h1{ font-size:18px; }
+    .sidebar-head p{ font-size:12px; }
+    .topic-btn{ gap:8px; }
+    .topic-btn .num{ font-size:13px; }
+    .topic-title{ font-size:20px; }
+    .content-wrap{ padding:20px 14px 50px; }
+    .side-btn{ font-size:14px; }
+    .panel .side-tag{ font-size:12px; padding:5px 10px; }
+    .panel p, .panel li{ line-height:1.9; }
   }
 </style>
 </head>
